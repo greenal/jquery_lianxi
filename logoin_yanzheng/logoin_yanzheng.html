@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+form{ margin:50px auto; padding:50px 850px;}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#address").focus(function(){
+		var txt_value = $(this).val();   //获取地址文本框
+		if(txt_value=="请输入邮箱地址"){
+			$(this).val("");	
+		}	
+	})
+	
+	$("#address").blur(function(){
+		var txt_value = $(this).val();
+		if(txt_value==""){
+			$(this).val("请输入邮箱地址");	
+		}	
+	})
+	
+	//对密码框进行操作
+	$("#password").focus(function(){
+		var txt_value = $(this).val();
+		if(txt_value=="请输入邮箱密码"){
+			$(this).val("");	
+		}
+			
+	})
+	
+	$("#password").blur(function(){
+		var txt_value = $(this).val();
+		if(txt_value==""){
+			$(this).val("请输入邮箱密码");
+		}	
+	})
+
+
+})
+
+</script>
+</head>
+
+<body>
+<form>
+	<input id="address" type="text" value="请输入邮箱地址" /><br /><br />
+  	<input id="password" type="text" value="请输入邮箱密码" /><br /><br />
+    <input type="button" value="登陆" />
+    </form>
+</body>
+</html>

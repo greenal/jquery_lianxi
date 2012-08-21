@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+.box{ margin:50px auto; padding:50px 850px;}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	 //$("#single").val("选择 2 号");
+	 $("#multiple").val(["选择 2 号","选择 3 号"]); //用数组的形式赋值
+	 $(":checkbox").val(["check2","check3"]);
+	 //$(":radio").val(["radio2","radio3"]);
+	 
+	 $("#single option:eq(1)").attr("selected",true);  //设置属性selected
+	 $("[value=radio2]:radio").attr("checked",true);     //设置属性checked
+
+
+})
+
+</script> 
+</head>
+
+<body>
+	<div class="box">
+    	<select id="single">
+        	<option>选择 1 号</option>
+            <option>选择 2 号</option>
+            <option>选择 3 号</option>
+        </select>
+
+
+		<select id="multiple" multiple="multiple" style=" height:120px;">
+        	<option selected="selected" >选择 1 号</option>
+            <option>选择 2 号</option>
+            <option>选择 3 号</option>
+            <option>选择 4 号</option>
+            <option selected="selected">选择 5 号</option>
+        </select>   
+        
+        <input type="checkbox" value="check1">多选1
+        <input type="checkbox" value="check2">多选2
+        <input type="checkbox" value="check3">多选3
+        <input type="checkbox" value="check4">多选4
+        
+        <input type="radio" value="radio1"> 单选1
+        <input type="radio" value="radio2"> 单选2
+        <input type="radio" value="radio3"> 单选3
+        
+        
+       
+        
+        
+    </div>
+
+</body>
+</html>
